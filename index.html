@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI 職業合格度測試</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script>
+      // Make jsPDF available globally for our component
+      window.jspdf = window.jspdf;
+    </script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                DEFAULT: 'hsl(221, 83%, 53%)', // A slightly more vibrant blue
+                light: 'hsl(220, 80%, 95%)',
+                dark: 'hsl(222, 73%, 45%)',
+              },
+              secondary: 'hsl(170, 40%, 50%)',
+              accent: 'hsl(30, 90%, 60%)',
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.5s ease-in-out',
+              'slide-in': 'slideIn 0.5s ease-in-out forwards',
+              'pulse-fast': 'pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'slide-out-left': 'slideOutLeft 0.3s ease-in-out forwards',
+              'slide-in-right': 'slideInRight 0.3s ease-in-out forwards',
+              'card-slide-out-left': 'cardSlideOutLeft 0.5s ease-in-out forwards',
+              'card-slide-out-right': 'cardSlideOutRight 0.5s ease-in-out forwards',
+            },
+            keyframes: {
+              fadeIn: { '0%': { opacity: 0 }, '100%': { opacity: 1 } },
+              slideIn: { '0%': { transform: 'translateY(20px)', opacity: 0 }, '100%': { transform: 'translateY(0)', opacity: 1 } },
+              slideOutLeft: { '0%': { transform: 'translateX(0)', opacity: 1 }, '100%': { transform: 'translateX(-100%)', opacity: 0 } },
+              slideInRight: { '0%': { transform: 'translateX(100%)', opacity: 0 }, '100%': { transform: 'translateX(0)', opacity: 1 } },
+              cardSlideOutLeft: { '0%': { transform: 'translateX(0) rotate(0)', opacity: 1 }, '100%': { transform: 'translateX(-150%) rotate(-20deg)', opacity: 0 } },
+              cardSlideOutRight: { '0%': { transform: 'translateX(0) rotate(0)', opacity: 1 }, '100%': { transform: 'translateX(150%) rotate(20deg)', opacity: 0 } },
+            },
+          },
+        },
+      };
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "recharts": "https://aistudiocdn.com/recharts@^3.2.1",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.417.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
