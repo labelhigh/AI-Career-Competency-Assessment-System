@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { ASSESSMENT_QUESTIONS } from '../../constants';
-import { UserAnswers, Answer } from '../../types';
+import { ASSESSMENT_QUESTIONS } from '../constants';
+import { UserAnswers, Answer } from '../types';
 
 // 動態引入所有問題元件
 import QuestionMultipleChoice from './assessment/QuestionMultipleChoice';
